@@ -101,7 +101,7 @@
           Bluetooth = true;
           Display = true;
           FocusModes = false;
-          NowPlaying = false;
+          NowPlaying = true;
           Sound = false;
       };
       dock = {

@@ -53,7 +53,7 @@ let cyrusConfig = {
     };
     git = {
       enable = true;
-      userName = "${username}";
+      userName = "Cyrus Knopf";
       ignores = [".DS_STORE"];
       extraConfig = {
         init.defaultBranch = "main";
