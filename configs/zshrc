@@ -11,7 +11,6 @@ alias vi="nvim"
 eval "$(direnv hook zsh)"
 
 # Environment variables
-export OPENAI_API_KEY='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'
 export OBSIDIAN_REST_API_KEY="3f1f7e14e293c24380fedad5c9aeab19d2bd88de64dbcb9234ee7b857df1e93e"
 
 # Personal Zsh configuration file. It is strongly recommended to keep all
