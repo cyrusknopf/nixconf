@@ -1,0 +1,8 @@
+[[language]]
+name = "python"
+file-types = ["py"]
+# comment-tokens = "#"
+roots = [ ".git" ]
+indent = { tab-width = 4, unit = "  " }
+formatter = { command = "pylsp"  }
+language-servers = [ "pylsp" ]

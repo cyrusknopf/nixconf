@@ -31,6 +31,7 @@ let cyrusConfig = {
       #discord
       prismlauncher 
       zathura
+      helix
       #obsidian
     ];
 
@@ -40,6 +41,8 @@ let cyrusConfig = {
 
     file = {
       ".zshrc".source = ../configs/zshrc;
+      ".config/helix/config.toml".source = ../configs/helix/config.toml;
+      ".config/helix/languages.toml".source = ../configs/helix/languages.toml;
     };
   };
 
