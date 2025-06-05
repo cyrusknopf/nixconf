@@ -33,10 +33,12 @@ let cyrusConfig = {
       zathura
       helix
       #obsidian
+      
+      marksman
     ];
 
     sessionVariables = {
-      EDITOR = "nvim";
+      EDITOR = "hx";
     };
 
     file = {
@@ -63,6 +65,9 @@ let cyrusConfig = {
     tmux = {
       enable = true;
       extraConfig = builtins.readFile ../configs/tmux.conf;
+      plugins = [
+        inputs.minimal-tmux.packages.${pkgs.system}.default
+      ];
     };
   };
 

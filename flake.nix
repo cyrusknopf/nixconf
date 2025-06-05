@@ -9,13 +9,17 @@
     home-manager = {
       url = "github:nix-community/home-manager";
     };
+    minimal-tmux = {
+      url = "github:niksingh710/minimal-tmux-status";
+    };
   };
 
   outputs = inputs@{ 
     self,
     nix-darwin,
     nixpkgs,
-    home-manager
+    home-manager,
+    minimal-tmux
     }:
   let username = "cyrus"; in
   let homedir = "/Users/cyrus"; in

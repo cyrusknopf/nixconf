@@ -18,9 +18,27 @@
         "type": "github"
       }
     },
-    "nix-darwin": {
+    "minimal-tmux": {
       "inputs": {
         "nixpkgs": "nixpkgs_2"
+      },
+      "locked": {
+        "lastModified": 1748977843,
+        "narHash": "sha256-0gXtFVan+Urb79AjFOjHdjl3Q73m8M3wFSo3ZhjxcBA=",
+        "owner": "niksingh710",
+        "repo": "minimal-tmux-status",
+        "rev": "de2bb049a743e0f05c08531a0461f7f81da0fc72",
+        "type": "github"
+      },
+      "original": {
+        "owner": "niksingh710",
+        "repo": "minimal-tmux-status",
+        "type": "github"
+      }
+    },
+    "nix-darwin": {
+      "inputs": {
+        "nixpkgs": "nixpkgs_3"
       },
       "locked": {
         "lastModified": 1748065210,
@@ -55,6 +73,22 @@
     },
     "nixpkgs_2": {
       "locked": {
+        "lastModified": 1729070438,
+        "narHash": "sha256-KOTTUfPkugH52avUvXGxvWy8ibKKj4genodIYUED+Kc=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "5785b6bb5eaae44e627d541023034e1601455827",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs_3": {
+      "locked": {
         "lastModified": 1747958103,
         "narHash": "sha256-qmmFCrfBwSHoWw7cVK4Aj+fns+c54EBP8cGqp/yK410=",
         "owner": "NixOS",
@@ -69,7 +103,7 @@
         "type": "github"
       }
     },
-    "nixpkgs_3": {
+    "nixpkgs_4": {
       "locked": {
         "lastModified": 1742923925,
         "narHash": "sha256-biPjLws6FiBVUUDHEMFq5pUQL84Wf7PntPYdo3oKkFw=",
@@ -88,8 +122,9 @@
     "root": {
       "inputs": {
         "home-manager": "home-manager",
+        "minimal-tmux": "minimal-tmux",
         "nix-darwin": "nix-darwin",
-        "nixpkgs": "nixpkgs_3"
+        "nixpkgs": "nixpkgs_4"
       }
     }
   },
