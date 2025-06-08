@@ -34,7 +34,8 @@ let cyrusConfig = {
       helix
       #obsidian
       
-      marksman
+      marksman      # markdown LSP
+      codebook      # spellcheck LSP
     ];
 
     sessionVariables = {
@@ -72,6 +73,7 @@ let cyrusConfig = {
   };
 
   programs.home-manager.enable = true;
+
 };
 in
 {
