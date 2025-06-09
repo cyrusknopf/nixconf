@@ -31,7 +31,7 @@ let cyrusConfig = {
       #discord
       prismlauncher 
       zathura
-      helix
+      evil-helix
       #obsidian
       
       marksman      # markdown LSP
