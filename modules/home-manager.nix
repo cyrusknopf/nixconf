@@ -31,11 +31,12 @@ let cyrusConfig = {
       #discord
       prismlauncher 
       zathura
-      evil-helix
+      helix
       #obsidian
       
       marksman      # markdown LSP
       codebook      # spellcheck LSP
+      python313Packages.python-lsp-server # python lsp
     ];
 
     sessionVariables = {
@@ -50,19 +51,21 @@ let cyrusConfig = {
   };
 
   programs = {
-    htop = {
+    btop = {
         enable = true;
-        settings.show_program_path = true;
     };
+
     git = {
       enable = true;
       userName = "Cyrus Knopf";
       ignores = [".DS_STORE"];
       extraConfig = {
+        core.editor = "hx";
         init.defaultBranch = "main";
         push.autoSetupRemote = true;
       };
     };
+
     tmux = {
       enable = true;
       extraConfig = builtins.readFile ../configs/tmux.conf;
