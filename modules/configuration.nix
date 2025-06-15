@@ -11,6 +11,8 @@
     systemPackages = with pkgs; [
       # System wide packages
       # $ nix-env -qaP | grep wget
+      
+      nix-search-cli
 
       nixd
       libcxx
@@ -27,7 +29,6 @@
       wget
 
       tree-sitter
-      nixd
 
       aerospace
     ];
