@@ -36,7 +36,10 @@ let cyrusConfig = {
       
       marksman      # markdown LSP
       codebook      # spellcheck LSP
-      python313Packages.python-lsp-server # python lsp
+      (python313.withPackages (ps: with ps; [
+        requests
+        python-lsp-server
+      ]))
     ];
 
     sessionVariables = {
@@ -45,8 +48,12 @@ let cyrusConfig = {
 
     file = {
       ".zshrc".source = ../configs/zshrc;
+
       ".config/helix/config.toml".source = ../configs/helix/config.toml;
       ".config/helix/languages.toml".source = ../configs/helix/languages.toml;
+
+      ".config/ghostty/config".source = ../configs/ghostty/config;
+      ".config/ghostty/themes/ferra".source = ../configs/ghostty/themes/ferra;
     };
   };
 
