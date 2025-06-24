@@ -36,6 +36,8 @@ let cyrusConfig = {
       
       marksman      # markdown LSP
       codebook      # spellcheck LSP
+
+
       (python313.withPackages (ps: with ps; [
         requests
         python-lsp-server
@@ -54,10 +56,19 @@ let cyrusConfig = {
 
       ".config/ghostty/config".source = ../configs/ghostty/config;
       ".config/ghostty/themes/ferra".source = ../configs/ghostty/themes/ferra;
+
+      ".aerospace.toml".source = ../configs/aerospace.toml;
     };
   };
 
   programs = {
+    # aerospace = {
+    #   enable = true;
+    #   userSettings = {
+    #     start-at-login = true;
+    #   };
+    # };
+
     btop = {
         enable = true;
     };
@@ -83,6 +94,8 @@ let cyrusConfig = {
   };
 
   programs.home-manager.enable = true;
+
+  
 
 };
 in

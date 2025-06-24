@@ -30,7 +30,6 @@
 
       tree-sitter
 
-      aerospace
     ];
   };
 
@@ -43,10 +42,6 @@
   };
 
   services = {
-    aerospace = {
-      #enable = true;
-      settings = pkgs.lib.importTOML ../configs/aerospace.toml;
-    };
   };
 
   # Logging is disabled by default
