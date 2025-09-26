@@ -1,9 +1,5 @@
 # Aliases
 alias nd='nix develop'
-alias kilburnssh="ssh -YC f10983ck@e-10cki2tl0003.it.manchester.ac.uk"
-alias mcoressh="ssh f10983ck@mcore48.cs.man.ac.uk"
-alias capricass="ssh f10983ck@caprica.cs.man.ac.uk"
-alias report="nvim ~/uni/project/report/report.tex"
 alias nixos-rebuild="sudo darwin-rebuild switch --flake ~/.config/nix-darwin/\#simple"
 alias vi="nvim"
 
@@ -11,7 +7,7 @@ alias vi="nvim"
 eval "$(direnv hook zsh)"
 
 # Environment variables
-export OBSIDIAN_REST_API_KEY="3f1f7e14e293c24380fedad5c9aeab19d2bd88de64dbcb9234ee7b857df1e93e"
+# export OBSIDIAN_REST_API_KEY="3f1f7e14e293c24380fedad5c9aeab19d2bd88de64dbcb9234ee7b857df1e93e"
 
 # Personal Zsh configuration file. It is strongly recommended to keep all
 # shell customization and configuration (including exported environment
