@@ -81,12 +81,9 @@ k = "move_visual_line_up"
 # I've kept d[X] commands here because it's better to at least have the stuff you want to delete
 # selected so that it's just a keystroke away to delete
 
-
-# [keys.normal.space.v]
-# b = ":sh git log -n 5 --format='format:%%h (%%an: %%ar) %%s' --no-patch -L%{cursor_line},+1:%{buffer_name}"
-[keys.normal.space.v]
-b = ":sh echo git log -n 5 --format=format:%h' (%an: %ar) %s' --no-patch -L%{cursor_line},%{cursor_line}:'%{buffer_name}'"
-c = ':sh echo "%{cursor_line}:%{buffer_name}"'
+# Blame
+[keys.normal.space]
+B = ":sh git log -n 5 --format='format:%%h (%%an: %%ar) %%s' --no-patch -L%{cursor_line},+1:%{buffer_name}"
 
 [keys.normal.y]
 #y = ["extend_to_line_bounds", "yank_to_clipboard"]
