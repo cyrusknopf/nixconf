@@ -4,19 +4,24 @@ theme = "ferra"
 line-number = "relative"
 soft-wrap.enable = true
 true-color = true
+end-of-line-diagnostics = "disable"
+
+[editor.inline-diagnostics]
+cursor-line = "hint"
+other-lines = "disable"
 
 [editor.cursor-shape]
 insert = "bar"
 normal = "block"
 
-[keys.insert]
-C-c = ["keep_primary_selection", "normal_mode"]
+# [keys.insert]
+# C-c = ["keep_primary_selection", "normal_mode"]
 
 [keys.normal]
 # Quick iteration on config changes
 #C-o = ":config-open"
 #C-r = ":config-reload"
-C-c = ["collapse_selection", "keep_primary_selection", "normal_mode"]
+# C-c = ["collapse_selection", "keep_primary_selection", "normal_mode"]
 
 # Some nice Helix stuff
 C-h = "select_prev_sibling"
@@ -139,4 +144,7 @@ P = "replace_selections_with_clipboard"
 
 # Escape the madness! No more fighting with the cursor! Or with multiple cursors!
 esc = ["collapse_selection", "keep_primary_selection", "normal_mode"]
-C-c = ["collapse_selection", "keep_primary_selection", "normal_mode", "exit_select_mode"]
+# C-c = ["collapse_selection", "keep_primary_selection", "normal_mode", "exit_select_mode"]
+
+C-s = ["split_selection_on_newline"]
+_ = ["trim_selections"]
