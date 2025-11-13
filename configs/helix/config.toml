@@ -147,4 +147,6 @@ esc = ["collapse_selection", "keep_primary_selection", "normal_mode"]
 # C-c = ["collapse_selection", "keep_primary_selection", "normal_mode", "exit_select_mode"]
 
 C-s = ["split_selection_on_newline"]
+C-k = ["copy_selection_on_prev_line"]
+C-j = ["copy_selection_on_next_line"]
 _ = ["trim_selections"]
