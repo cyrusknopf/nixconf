@@ -1,23 +1,20 @@
-Checks: >
-  -readability-identifier-length,
-  clang-diagnostic-*,
-  clang-analyzer-*,
-  bugprone-*,
-  performance-*,
-  cppcoreguidelines-*
-
 WarningsAsErrors: ''
 
 Diagnostics:
   ClangTidy:
     Add: 
-      # - modernize*
+      - modernize*
       - readability*
       - cppcoreguidelines-rvalue-reference-param-not-moved
       - performance-unnecessary-value-param
       - cppcoreguidelines-*
       - performance-*
       - bugprone-*
+    Remove:
+      - readability-identifier-length
+      - readability-function-cognitive-complexity
+      - bugprone-easily-swappable-parameters
+      - modernize-use-trailing-return-type
 
 CompileFlags:
   Add: 
