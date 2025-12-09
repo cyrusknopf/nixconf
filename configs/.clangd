@@ -3,22 +3,22 @@ WarningsAsErrors: ''
 Diagnostics:
   ClangTidy:
     Add: 
-      - modernize*
-      - readability*
-      - cppcoreguidelines-rvalue-reference-param-not-moved
-      - performance-unnecessary-value-param
+      - modernize-*
+      - readability-*
       - cppcoreguidelines-*
       - performance-*
       - bugprone-*
     Remove:
       - readability-identifier-length
       - readability-function-cognitive-complexity
+      - readability-implicit-bool-conversion
       - bugprone-easily-swappable-parameters
       - modernize-use-trailing-return-type
+      - modernize-use-nodiscard
 
 CompileFlags:
   Add: 
-    - -std=c++20
+    - -std=c++23
     - -Wall
     - -Wextra
     - -Wshadow
