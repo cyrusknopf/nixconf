@@ -18,7 +18,7 @@ Diagnostics:
 
 CompileFlags:
   Add: 
-    - -std=c++23
+    - -std=c++26
     - -Wall
     - -Wextra
     - -Wshadow

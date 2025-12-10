@@ -34,6 +34,9 @@ let cyrusConfig = {
       helix
       #obsidian
       
+      nh
+      llvmPackages_20.libcxxClang
+
       marksman      # markdown LSP
       codebook      # spellcheck LSP
 
