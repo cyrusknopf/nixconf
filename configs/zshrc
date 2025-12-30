@@ -3,7 +3,11 @@ alias nd='nix develop'
 alias nixos-rebuild="sudo darwin-rebuild switch --flake ~/.config/nix-darwin/\#simple"
 alias vi="nvim"
 
-alias gca='git commit -a -m && git commit --amend'
+gca() {
+  git commit -a -m "$1" && git commit --amend
+}
+
+alias gs='git status'
 alias gc="git commit && git commit --amend"
 alias gsw="git switch"
 alias glo="git log --oneline"
