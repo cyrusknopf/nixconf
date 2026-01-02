@@ -69,6 +69,8 @@
     timeZone = "Europe/London";
   };
 
+  nixpkgs.config = { allowUnfree = true; };
+
   # https://mynixos.com/nix-darwin/options/system.defaults
   system = {
     primaryUser = "cyrus";
