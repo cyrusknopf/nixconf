@@ -20,10 +20,8 @@
       texlab
 
       vim
-      neovim
       tmux
 
-      ripgrep
       neofetch
       htop
       wget
@@ -33,6 +31,23 @@
     ];
   };
 
+  homebrew = {
+    enable = true;
+
+    taps = ["andrewmd5/tap"];
+
+    brews = [
+      "dawn"
+      "watch"
+    ];
+
+    casks = [
+      "ghostty"
+      "arc"
+      "raycast"
+      "ghostty"
+    ];
+  };
 
   security = {
     pam.services.sudo_local = {
