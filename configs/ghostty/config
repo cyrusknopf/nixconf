@@ -42,7 +42,7 @@
 # # Just for example:
 # resize-overlay-duration = 4s 200ms
 
-font-family = "MesloLGL Nerd Font Propo"
+font-family = "Myna"
 font-size = 18
 
 quit-after-last-window-closed = true

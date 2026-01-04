@@ -27,19 +27,17 @@ let cyrusConfig = {
       # $ nix-env -qaP | grep wget
       # General GUI apps
 
-      #anki-bin
-      #discord
       prismlauncher 
       zathura
       helix
-      #obsidian
+      # obsidian
+      entr
       
       nh
       llvmPackages_20.libcxxClang
 
       marksman      # markdown LSP
       codebook      # spellcheck LSP
-
 
       (python313.withPackages (ps: with ps; [
         requests
@@ -98,8 +96,6 @@ let cyrusConfig = {
   };
 
   programs.home-manager.enable = true;
-
-  
 
 };
 in
