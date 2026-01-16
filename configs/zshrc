@@ -123,6 +123,7 @@ alias ls="${aliases[ls]:-ls} -A"
 
 if [ -n "$TURING_HOME" ]; then
   alias shell="uvx --from turingdb turingsh --host http://localhost:6666"
+  source /turing/setup.sh
 fi
 
 # Set shell options: http://zsh.sourceforge.net/Doc/Release/Options.html.
