@@ -25,6 +25,9 @@ args = ["serve"]
 name = "markdown"
 language-servers = ["marksman" ,"codebook"]
 
+[[language]]
+name = "latex"
+language-servers = ["texlab" ,"codebook"]
 
 [language-server]
 clangd = { command = "clangd", args = [ "--clang-tidy" ] }
