@@ -11,11 +11,16 @@ gca() {
   git commit -a -m "$1" && git commit --amend
 }
 
-alias gs='git status'
+gs() {
+  git status --short
+}
+
+alias gst='git status'
 alias gc="git commit && git commit --amend"
 alias gsw="git switch"
 alias glo="git log --oneline"
 alias gd="git diff"
+alias gdo="gd --name-status main"
 
 # eval "$(direnv hook zsh)"
 
