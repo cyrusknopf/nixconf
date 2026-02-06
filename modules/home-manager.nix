@@ -30,7 +30,7 @@ let cyrusConfig = {
       prismlauncher 
       zathura
       helix
-      # obsidian
+      obsidian
       entr
       
       nh
