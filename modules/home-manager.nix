@@ -51,6 +51,7 @@ let cyrusConfig = {
 
     file = {
       ".zshrc".source = ../configs/zshrc;
+      ".p10k.zsh".source = ../configs/p10k.zsh
       ".clangd".source = ../configs/.clangd;
 
       ".config/helix/config.toml".source = ../configs/helix/config.toml;

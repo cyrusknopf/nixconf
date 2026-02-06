@@ -95,6 +95,7 @@ path=($path /nix/store/4sz41xx038wkxqp2jkpkv5d58cddyizx-clang-tools-19.1.6/bin)
 
 # Export environment variables.
 export GPG_TTY=$TTY
+export EDITOR=hx
 
 # Source additional local files if they exist.
 z4h source ~/.env.zsh
@@ -149,6 +150,11 @@ if [ -n "$TURING_HOME" ]; then
   '
   alias shell="uvx --from turingdb turingsh --host http://localhost:6666"
   source /turing/setup.sh
+
+  nt() {
+    /home/dev/new-test.sh "$1"
+  }
+
 fi
 
 # Set shell options: http://zsh.sourceforge.net/Doc/Release/Options.html.
