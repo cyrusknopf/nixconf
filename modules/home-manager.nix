@@ -29,6 +29,7 @@ let cyrusConfig = {
 
       prismlauncher 
       zathura
+      sioyek
       helix
       obsidian
       entr
