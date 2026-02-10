@@ -1,6 +1,18 @@
 # Aliases
 alias nd='nix develop'
-alias nixos-rebuild="sudo darwin-rebuild switch --flake ~/.config/nix-darwin/\#simple"
+
+case "$OSTYPE" in
+  darwin*)
+    alias nixos-rebuild="echo 'DARWIN' && darwin-rebuild switch --flake ~/.config/nix/\#cyrus"
+    ;;
+  linux-gnu*)
+    alias nixos-rebuild="echo 'LINUX' && home-manager switch --flake ~/.config/nix/\#cyrus"
+    ;;
+  *)
+    alias nixos-rebuild="echo 'Unknown OS'"
+    ;;
+esac
+
 alias vi="nvim"
 
 blame() {
