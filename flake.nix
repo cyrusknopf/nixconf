@@ -1,5 +1,5 @@
 {
-  description = "Cyrus' nix-darwin system flake";
+  description = "Cyrus' Nix system flake";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
@@ -51,7 +51,6 @@
           
             imports = [
               ./modules/home.nix
-              ./modules/shared-packages.nix
             ];
           };
         }
@@ -69,7 +68,6 @@
 
       modules = [
         ./modules/home.nix
-        ./modules/shared-packages.nix
       ];
       
     };
