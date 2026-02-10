@@ -11,6 +11,9 @@
     packages = let
       darwinPackages = if pkgs.stdenv.isDarwin then with pkgs; [
       ] else [];
+
+      linuxPackages = if !pkgs.stdenv.isDarwin then with pkgs; [
+      ] else [];
     in
       with pkgs; [
         nixd
@@ -28,7 +31,7 @@
 
         sioyek
         # obsidian
-      ] ++ darwinPackages;
+      ] ++ darwinPackages ++ linuxPackages;
 
     sessionVariables = {
       EDITOR = "hx";
