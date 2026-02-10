@@ -8,23 +8,27 @@
     username = username;
     homeDirectory = if pkgs.stdenv.isDarwin then "/Users/cyrus" else "/home/cyrus";
 
-    packages = with pkgs; [
-      nixd
-      tree-sitter
-      marksman
-      codebook
+    packages = let
+      darwinPackages = if pkgs.stdenv.isDarwin then with pkgs; [
+      ] else [];
+    in
+      with pkgs; [
+        nixd
+        tree-sitter
+        marksman
+        codebook
 
-      vim
-      helix
+        vim
+        helix
 
-      neofetch
-      htop
-      wget
-      entr
+        neofetch
+        htop
+        wget
+        entr
 
-      sioyek
-      # obsidian
-    ];
+        sioyek
+        # obsidian
+      ] ++ darwinPackages;
 
     sessionVariables = {
       EDITOR = "hx";
@@ -44,33 +48,31 @@
 
         ".aerospace.toml".source = ../configs/aerospace.toml;
     };
-
-    /*
-    git = {
-      enable = true;
-      userName = "Cyrus Knopf";
-      ignores = [".DS_STORE"];
-      extraConfig = {
-        core.editor = "hx";
-        init.defaultBranch = "main";
-        push.autoSetupRemote = true;
-      };
-    };
-
-    tmux = {
-        enable = true;
-        extraConfig = builtins.readFile ../configs/tmux.conf;
-      
-        plugins = [
-          inputs.minimal-tmux.packages.${pkgs.system}.default
-        ];
-      
-      };
-    */
-
   };
 
-  programs.zsh.enable = true;
-  programs.git.enable = true;
+  programs.home-manager.enable = true;
 
+  programs.zsh.enable = true;
+
+  programs.git = {
+    enable = true;
+    userName = "Cyrus Knopf";
+    ignores = [".DS_STORE"];
+    extraConfig = {
+      core.editor = "hx";
+      init.defaultBranch = "main";
+      push.autoSetupRemote = true;
+    };
+  };
+
+
+  programs.tmux = {
+    enable = true;
+    extraConfig = builtins.readFile ../configs/tmux.conf;
+
+    plugins = [
+      # inputs.minimal-tmux.packages.${pkgs.system}.default
+    ];
+    
+  };
 }
