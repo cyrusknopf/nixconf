@@ -40,6 +40,8 @@
         ".p10k.zsh".source = ../configs/p10k.zsh;
         ".clangd".source = ../configs/.clangd;
 
+        ".tmux.conf".source = ../configs/tmux.conf;
+
         ".config/helix/config.toml".source = ../configs/helix/config.toml;
         ".config/helix/languages.toml".source = ../configs/helix/languages.toml;
 
