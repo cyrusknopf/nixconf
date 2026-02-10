@@ -63,6 +63,7 @@
     enable = true;
     userName = "Cyrus Knopf";
     ignores = [".DS_STORE"];
+    lfs.enable = true;
     extraConfig = {
       core.editor = "hx";
       init.defaultBranch = "main";

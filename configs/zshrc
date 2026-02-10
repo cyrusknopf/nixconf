@@ -1,5 +1,5 @@
 # Aliases
-alias nd='nix develop'
+alias nd='nix develop -c $SHELL'
 
 case "$OSTYPE" in
   darwin*)
