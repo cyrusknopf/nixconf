@@ -27,7 +27,6 @@ let cyrusConfig = {
       # $ nix-env -qaP | grep wget
       # General GUI apps
 
-      prismlauncher 
       zathura
       sioyek
       helix
