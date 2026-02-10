@@ -29,6 +29,7 @@
 
   file = {
       ".zshrc".source = ../configs/zshrc;
+      ".zshenv".source = ../configs/zshenv;
       ".p10k.zsh".source = ../configs/p10k.zsh;
       ".clangd".source = ../configs/.clangd;
 
