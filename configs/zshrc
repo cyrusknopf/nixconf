@@ -27,6 +27,10 @@ gs() {
   git status --short
 }
 
+gu() {
+  git pull origin main --rebase --no-edit
+}
+
 alias gst='git status'
 alias gc="git commit && git commit --amend"
 alias gsw="git switch"
