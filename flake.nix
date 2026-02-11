@@ -36,7 +36,7 @@
     # $ darwin-rebuild build --flake .#simple
     darwinConfigurations."simple" = nix-darwin.lib.darwinSystem {
       system = "aarch64-darwin";
-      specialArgs = { inherit username darwinHomedir linuxHomedir inputs; };
+      specialArgs = { inherit self username darwinHomedir linuxHomedir inputs; };
 
       modules = [ 
         ./modules/darwin-system.nix
@@ -62,7 +62,7 @@
       pkgs = nixpkgs.legacyPackages.x86_64-linux;
 
       extraSpecialArgs = {
-        inherit username inputs;
+        inherit self username inputs;
         homedir = linuxHomedir;
       };
 

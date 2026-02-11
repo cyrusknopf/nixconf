@@ -1,6 +1,5 @@
-{ pkgs, username, linuxHomedir, darwinHomedir, ... }:
-
-# Home manager settings
+{ self, pkgs, username, linuxHomedir, darwinHomedir, ... }:
+ # Home manager settings
 {
   home = {
     stateVersion = "23.05";
@@ -38,20 +37,20 @@
     };
 
     file = {
-        ".zshrc".source = ../configs/zshrc;
-        ".zshenv".source = ../configs/zshenv;
-        ".p10k.zsh".source = ../configs/p10k.zsh;
-        ".clangd".source = ../configs/.clangd;
+        ".zshrc".source = "${self}/configs/zshrc";
+        ".zshenv".source = "${self}/configs/zshenv";
+        ".p10k.zsh".source = "${self}/configs/p10k.zsh";
+        ".clangd".source = "${self}/configs/.clangd";
 
-        ".tmux.conf".source = ../configs/tmux.conf;
+        ".tmux.conf".source = "${self}/configs/tmux.conf";
 
-        ".config/helix/config.toml".source = ../configs/helix/config.toml;
-        ".config/helix/languages.toml".source = ../configs/helix/languages.toml;
+        ".config/helix/config.toml".source = "${self}/configs/helix/config.toml";
+        ".config/helix/languages.toml".source = "${self}/configs/helix/languages.toml";
 
-        ".config/ghostty/config".source = ../configs/ghostty/config;
-        ".config/ghostty/themes/ferra".source = ../configs/ghostty/themes/ferra;
+        ".config/ghostty/config".source = "${self}/configs/ghostty/config";
+        ".config/ghostty/themes/ferra".source = "${self}/configs/ghostty/themes/ferra";
 
-        ".aerospace.toml".source = ../configs/aerospace.toml;
+        ".aerospace.toml".source = "${self}/configs/aerospace.toml";
     };
   };
 
