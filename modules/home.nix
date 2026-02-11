@@ -61,18 +61,26 @@
 
   programs.git = {
     enable = true;
-    delta.enable = true;
-    userName = "Cyrus Knopf";
-    userEmail = "cyrus.knopf@gmail.com";
+
+    settings = {
+      user = {
+        name = "Cyrus Knopf";
+        email = "cyrus.knopf@gmail.com";
+      };
+    };
+    
     ignores = [".DS_STORE"];
     lfs.enable = true;
-    extraConfig = {
+    settings = {
       core.editor = "hx";
       init.defaultBranch = "main";
       push.autoSetupRemote = true;
     };
   };
-
+  programs.delta = {
+    enable = true;
+    enableGitIntegration = true;
+  };
 
   programs.tmux = {
     enable = true;
