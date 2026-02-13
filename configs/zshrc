@@ -28,7 +28,7 @@ gs() {
 }
 
 gu() {
-  git pull origin main --rebase --no-edit
+  git fetch origin && git rebase origin/main
 }
 
 alias gst='git status'
@@ -169,7 +169,7 @@ if [ -n "$TURING_HOME" ]; then
   alias turingdb="/home/cyrus/turingdb/build/turing_install/bin/turingdb"
 
   nt() {
-    /home/dev/new-test.sh "$1"
+    /home/cyrus/new-test.sh "$1"
   }
 
 fi
