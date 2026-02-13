@@ -33,7 +33,7 @@
   in
   {
     # darwin specific conf
-    darwinConfigurations."simple" = nix-darwin.lib.darwinSystem {
+    darwinConfigurations."cyrus" = nix-darwin.lib.darwinSystem {
       system = "aarch64-darwin";
       specialArgs = { inherit self username darwinHomedir linuxHomedir inputs; };
 
