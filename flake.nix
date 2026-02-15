@@ -32,8 +32,7 @@
     linuxHomedir = "/home/cyrus";
   in
   {
-    # Build darwin flake using:
-    # $ darwin-rebuild build --flake .#simple
+    # darwin specific conf
     darwinConfigurations."simple" = nix-darwin.lib.darwinSystem {
       system = "aarch64-darwin";
       specialArgs = { inherit self username darwinHomedir linuxHomedir inputs; };
@@ -57,7 +56,7 @@
       ];
     };
 
-    # Linux home manager setup
+    # linux conf
     homeConfigurations."cyrus" = home-manager.lib.homeManagerConfiguration {
       pkgs = nixpkgs.legacyPackages.x86_64-linux;
 
