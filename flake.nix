@@ -44,7 +44,7 @@
           home-manager.useUserPackages = true;
           home-manager.users.cyrus = {
             _module.args = {
-              inherit username inputs;
+              inherit self username inputs;
               homedir = darwinHomedir;
             };
           
