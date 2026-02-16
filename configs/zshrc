@@ -41,7 +41,6 @@ alias gdo="gd --name-status main"
 # eval "$(direnv hook zsh)"
 
 # Environment variables
-# export OBSIDIAN_REST_API_KEY="3f1f7e14e293c24380fedad5c9aeab19d2bd88de64dbcb9234ee7b857df1e93e"
 
 # Personal Zsh configuration file. It is strongly recommended to keep all
 # shell customization and configuration (including exported environment
