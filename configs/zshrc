@@ -37,6 +37,7 @@ alias gsw="git switch"
 alias glo="git log --oneline"
 alias gd="git diff"
 alias gdo="gd --name-status main"
+alias gcp="git cherry-pick"
 
 # eval "$(direnv hook zsh)"
 
@@ -176,3 +177,5 @@ fi
 # Set shell options: http://zsh.sourceforge.net/Doc/Release/Options.html.
 setopt glob_dots     # no special treatment for file names with a leading dot
 setopt no_auto_menu  # require an extra TAB press to open the completion menu
+setopt auto_pushd    # cd && pushd
+setopt always_to_end
