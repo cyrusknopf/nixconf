@@ -2,12 +2,19 @@ WarningsAsErrors: ''
 
 Diagnostics:
   ClangTidy:
+    FastCheckFilter: None
     Add: 
       - modernize-*
       - readability-*
       - cppcoreguidelines-*
       - performance-*
       - bugprone-*
+      - misc-*
+      - fuschia-*
+      - google-*
+      - hicpp-*
+      - llvm-*
+      - portability-*
     Remove:
       - readability-identifier-length
       - readability-function-cognitive-complexity
@@ -15,6 +22,10 @@ Diagnostics:
       - bugprone-easily-swappable-parameters
       - modernize-use-trailing-return-type
       - modernize-use-nodiscard
+      - google-readability-todo
+      - google-readability-namespace-comments
+      - google-build-using-namespace
+      - llvm-namespace-comment
 
 CompileFlags:
   Add: 
