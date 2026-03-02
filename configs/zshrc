@@ -112,6 +112,7 @@ path=($path /nix/store/4sz41xx038wkxqp2jkpkv5d58cddyizx-clang-tools-19.1.6/bin)
 # Export environment variables.
 export GPG_TTY=$TTY
 export EDITOR=hx
+export MANWIDTH=80
 
 # Source additional local files if they exist.
 z4h source ~/.env.zsh

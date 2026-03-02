@@ -13,6 +13,7 @@
 
       linuxPackages = if !pkgs.stdenv.isDarwin then with pkgs; [
       ] else [];
+
     in
       with pkgs; [
         nixd
@@ -27,6 +28,7 @@
         htop
         wget
         entr
+        codespelunker
 
         sioyek
         # obsidian
