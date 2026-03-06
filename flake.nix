@@ -68,7 +68,21 @@
       modules = [
         ./modules/home.nix
       ];
-      
     };
+
+    homeConfigurations."cyrus@turingdb" = home-manager.lib.homeManagerConfiguration {
+      pkgs = nixpkgs.legacyPackages.x86_64-linux;
+      extraSpecialArgs = {
+        inherit self username inputs;
+        homedir = linuxHomedir;
+      };
+
+      modules = [
+        ./modules/home.nix
+        ./modules/turingbio.nix
+      ];
+    };
+
   };
+
 }

@@ -17,6 +17,7 @@
     in
       with pkgs; [
         nixd
+        nh
         tree-sitter
         marksman
         codebook
@@ -56,38 +57,39 @@
     };
   };
 
-  programs.home-manager.enable = true;
+  programs = {
+    home-manager.enable = true;
 
-  programs.git = {
-    enable = true;
+    git = {
+      enable = true;
 
-    settings = {
-      user = {
-        name = "Cyrus Knopf";
-        email = "cyrus.knopf@gmail.com";
+      settings = {
+        user = {
+          name = "Cyrus Knopf";
+          email = "cyrus.knopf@gmail.com";
+        };
+      };
+    
+      ignores = [".DS_STORE"];
+      lfs.enable = true;
+      settings = {
+        core.editor = "hx";
+        init.defaultBranch = "main";
+        push.autoSetupRemote = true;
       };
     };
-    
-    ignores = [".DS_STORE"];
-    lfs.enable = true;
-    settings = {
-      core.editor = "hx";
-      init.defaultBranch = "main";
-      push.autoSetupRemote = true;
+    delta = {
+      enable = true;
+      enableGitIntegration = true;
     };
-  };
-  programs.delta = {
-    enable = true;
-    enableGitIntegration = true;
-  };
 
-  programs.tmux = {
-    enable = true;
-    extraConfig = builtins.readFile ../configs/tmux.conf;
+    tmux = {
+      enable = true;
+      extraConfig = builtins.readFile ../configs/tmux.conf;
 
-    plugins = [
-      # inputs.minimal-tmux.packages.${pkgs.system}.default
-    ];
-    
+      plugins = [
+        # inputs.minimal-tmux.packages.${pkgs.system}.default
+      ];
+    };
   };
 }
