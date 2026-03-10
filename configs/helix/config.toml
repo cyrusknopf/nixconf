@@ -85,6 +85,7 @@ k = [ "move_visual_line_up" ]
 # git log -n 5 --format='format:%h (%an: %ar) %s' --no-patch -L"$2",+1:"$1"
 [keys.normal.space]
 B = ":sh git log -n 5 --format='format:%%h (%%an: %%ar) %%s' --no-patch -L%{cursor_line},+1:%{buffer_name}"
+z = ":toggle gutters.line-numbers.min-width 120 3" #note: hard coded for msi uw
 
 [keys.normal.y]
 #y = ["extend_to_line_bounds", "yank_to_clipboard"]

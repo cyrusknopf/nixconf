@@ -3,17 +3,17 @@ alias nd='nix develop -c $SHELL'
 
 case "$OSTYPE" in
   darwin*)
-    alias nixos-rebuild="echo 'sudo darwin-rebuild switch --flake ~/.config/nix/\#cyrus"
+    alias nixos-rebuild="sudo darwin-rebuild switch --flake ~/.config/nix/\#cyrus"
     ;;
   linux-gnu*)
-    alias nixos-rebuild="echo 'home-manager switch --flake ~/.config/nix/\#cyrus"
+    alias nixos-rebuild="home-manager switch --flake ~/.config/nix/\#cyrus"
     ;;
   *)
     alias nixos-rebuild="echo 'Unknown OS'"
     ;;
 esac
 
-alias turingnix-rebuild="echo 'sudo darwin-rebuild switch --flake ~/.config/nix/\#cyrus@turingdb"
+alias turingnix-rebuild="home-manager switch --flake ~/.config/nix/\#cyrus@turingdb"
 
 alias vi="nvim"
 
@@ -111,6 +111,7 @@ path=(~/bin $path)
 
 # Add clang-tools to path
 path=($path /nix/store/4sz41xx038wkxqp2jkpkv5d58cddyizx-clang-tools-19.1.6/bin)
+path=($path $HOME/.nix-profile/bin)
 
 # Export environment variables.
 export GPG_TTY=$TTY
