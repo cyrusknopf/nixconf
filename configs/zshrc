@@ -170,8 +170,9 @@ if [ -n "$TURING_HOME" ]; then
 
   '
   alias shell="uvx --from turingdb turingsh --host http://localhost:6666"
-  source /turing/setup.sh
+  # source /turing/setup.sh
   alias turingdb="/home/cyrus/turingdb/build/turing_install/bin/turingdb"
+  source /nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh
 
   nt() {
     /home/cyrus/new-test.sh "$1"

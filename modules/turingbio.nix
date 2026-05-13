@@ -11,6 +11,9 @@ home = {
     git-lfs
     gnum4
     clang-tools
+    rr
+
+    uv
 
     # Profiling and anaylsis
     gdb
