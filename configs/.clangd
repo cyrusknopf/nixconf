@@ -26,6 +26,7 @@ Diagnostics:
       - google-build-using-namespace
       - llvm-namespace-comment
       - cppcoreguidelines-avoid-do-while
+      - cppcoreguidelines-owning-memory
 
 CompileFlags:
   Add: 

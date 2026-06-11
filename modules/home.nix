@@ -1,6 +1,11 @@
 { self, pkgs, username, linuxHomedir, darwinHomedir, ... }:
  # Home manager settings
 {
+  nixpkgs.config = {
+    allowBroken = false;
+    allowUnfree = true;
+  };
+
   home = {
     stateVersion = "23.05";
 
@@ -30,9 +35,10 @@
         wget
         entr
         codespelunker
+        tree
 
         sioyek
-        # obsidian
+        obsidian
       ] ++ darwinPackages ++ linuxPackages;
 
     sessionVariables = {
