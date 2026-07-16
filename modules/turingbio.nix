@@ -13,6 +13,7 @@ home = {
     clang-tools
     rr
     python312
+    claude-code
 
     uv
 

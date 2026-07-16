@@ -33,6 +33,10 @@ gu() {
   git fetch origin && git rebase origin/main
 }
 
+gane() {
+  git commit --amend --no-edit
+}
+
 alias gst='git status'
 alias gc="git commit && git commit --amend"
 alias gsw="git switch"
