@@ -37,6 +37,10 @@
         codespelunker
         tree
 
+        qemu
+
+        anki
+
         sioyek
         obsidian
       ] ++ darwinPackages ++ linuxPackages;

@@ -17,7 +17,7 @@
 
   homebrew = {
     enable = true;
-    brews = [ "watch" ];
+    brews = [ "watch" "tailscale" ];
     casks = [ "ghostty" "arc" "raycast" ];
   };
 
