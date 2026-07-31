@@ -19,3 +19,5 @@ o.timeoutlen = 500
 o.ttimeoutlen = 10
 
 o.updatetime = 300
+
+o.clipboard = unnamedplus
