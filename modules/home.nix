@@ -29,6 +29,8 @@
 
         vim
         helix
+        neovim
+        fzf
 
         neofetch
         htop
@@ -47,6 +49,7 @@
 
     sessionVariables = {
       EDITOR = "hx";
+      FZF_DEFAULT_OPTS="--bind tab:down,btab:up";
     };
 
     file = {
@@ -59,6 +62,7 @@
 
         ".config/helix/config.toml".source = "${self}/configs/helix/config.toml";
         ".config/helix/languages.toml".source = "${self}/configs/helix/languages.toml";
+        ".config/nvim/".source = "${self}/configs/nvim/";
 
         ".config/ghostty/config".source = "${self}/configs/ghostty/config";
         ".config/ghostty/themes/ferra".source = "${self}/configs/ghostty/themes/ferra";
