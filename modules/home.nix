@@ -6,6 +6,8 @@
     allowUnfree = true;
   };
 
+  fonts.fontconfig.enable = true;
+
   home = {
     stateVersion = "23.05";
 
@@ -47,6 +49,8 @@
 
         sioyek
         obsidian
+
+        nerd-fonts.symbols-only
       ] ++ darwinPackages ++ linuxPackages;
 
     sessionVariables = {
