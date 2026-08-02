@@ -3,16 +3,19 @@ alias nd='nix develop -c $SHELL'
 
 case "$OSTYPE" in
   darwin*)
-    alias nixos-rebuild="sudo darwin-rebuild switch --flake ~/.config/nix/\#cyrus"
+    alias nixos-rebuild="sudo darwin-rebuild switch --flake ~/.config/nix/#cyrus"
     ;;
   linux-gnu*)
-    alias nixos-rebuild="home-manager switch --flake ~/.config/nix/\#cyrus"
+    if command -v nixos-version >/dev/null 2>&1; then
+      alias nixos-rebuild="sudo nixos-rebuild switch --flake ~/.config/nix/#nixos"
+    else
+      alias nixos-rebuild="home-manager switch --flake ~/.config/nix/#cyrus"
+    fi
     ;;
   *)
     alias nixos-rebuild="echo 'Unknown OS'"
     ;;
 esac
-
 alias turingnix-rebuild="home-manager switch --flake ~/.config/nix/\#cyrus@turingdb"
 
 alias vi="nvim"

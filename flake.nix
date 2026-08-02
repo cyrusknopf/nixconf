@@ -56,6 +56,22 @@
       ];
     };
 
+    # nixos conf
+    # TODO: Add home manager here
+    nixosConfigurations."nixos" = nixpkgs.lib.nixosSystem {
+      system = "x86_64-linux";
+
+      specialArgs = {
+        inherit self username inputs;
+      };
+
+      modules = [
+        ./modules/nixos.nix
+        ./modules/hardware-configuration.nix
+        ./modules/home.nix
+      ];
+    };
+
     # linux conf
     homeConfigurations."cyrus" = home-manager.lib.homeManagerConfiguration {
       pkgs = nixpkgs.legacyPackages.x86_64-linux;
