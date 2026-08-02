@@ -7,7 +7,7 @@ case "$OSTYPE" in
     ;;
   linux-gnu*)
     if command -v nixos-version >/dev/null 2>&1; then
-      alias nixos-rebuild="sudo nixos-rebuild switch --flake ~/.config/nix/#nixos"
+      alias nixos-rebuild="sudo nixos-rebuild switch --flake '~/.config/nix/#nixos'"
     else
       alias nixos-rebuild="home-manager switch --flake ~/.config/nix/#cyrus"
     fi

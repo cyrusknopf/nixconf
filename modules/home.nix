@@ -43,6 +43,8 @@
 
         anki
 
+        ghostty
+
         sioyek
         obsidian
       ] ++ darwinPackages ++ linuxPackages;

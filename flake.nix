@@ -48,27 +48,36 @@
               homedir = darwinHomedir;
             };
           
-            imports = [
-              ./modules/home.nix
-            ];
+            imports = [ ./modules/home.nix ];
           };
         }
       ];
     };
 
     # nixos conf
-    # TODO: Add home manager here
     nixosConfigurations."nixos" = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
 
       specialArgs = {
-        inherit self username inputs;
+        inherit self username inputs home-manager;
       };
 
       modules = [
         ./modules/nixos.nix
         ./modules/hardware-configuration.nix
-        ./modules/home.nix
+        home-manager.nixosModules.home-manager
+        {
+          home-manager.useGlobalPkgs = true;
+          home-manager.useUserPackages = true;
+          home-manager.users.cyrus = {
+            _module.args = {
+              inherit self username inputs;
+              homedir = linuxHomedir;
+            };
+
+            imports = [ ./modules/home.nix ];
+          };
+        }
       ];
     };
 
