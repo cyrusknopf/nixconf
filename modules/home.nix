@@ -19,6 +19,7 @@
       ] else [];
 
       linuxPackages = if !pkgs.stdenv.isDarwin then with pkgs; [
+        perf
       ] else [];
 
     in
