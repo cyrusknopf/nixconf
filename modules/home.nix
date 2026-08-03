@@ -28,6 +28,7 @@
         tree-sitter
         marksman
         codebook
+        clang-tools
 
         vim
         helix
@@ -65,6 +66,8 @@
         ".clangd".source = "${self}/configs/.clangd";
 
         ".tmux.conf".source = "${self}/configs/tmux.conf";
+
+        ".config/hypr/hyprland.conf".source = "${self}/configs/hyprland.conf";
 
         ".config/helix/config.toml".source = "${self}/configs/helix/config.toml";
         ".config/helix/languages.toml".source = "${self}/configs/helix/languages.toml";
