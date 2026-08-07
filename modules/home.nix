@@ -45,6 +45,8 @@
 
         qemu
 
+        tailscale
+
         anki
 
         ghostty
