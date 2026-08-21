@@ -48,5 +48,6 @@ font-size = 18
 quit-after-last-window-closed = true
 keybind=shift+3=text:#
 
+# theme=purplepeter
 theme=ferra
 #macos-titlebar-style = hidden

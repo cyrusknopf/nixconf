@@ -51,6 +51,8 @@
 
         ghostty
 
+        w3m
+
         sioyek
         obsidian
 
@@ -60,6 +62,7 @@
     sessionVariables = {
       EDITOR = "hx";
       FZF_DEFAULT_OPTS="--bind tab:down,btab:up";
+      MANWIDTH = 80;
     };
 
     file = {
