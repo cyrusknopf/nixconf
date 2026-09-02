@@ -19,6 +19,7 @@
       ] else [];
 
       linuxPackages = if !pkgs.stdenv.isDarwin then with pkgs; [
+        ghostty
         perf
       ] else [];
 
@@ -48,8 +49,6 @@
         tailscale
 
         anki
-
-        ghostty
 
         w3m
 
